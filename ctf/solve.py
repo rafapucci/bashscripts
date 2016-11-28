@@ -8,12 +8,12 @@ def deszipa( local ):
 
     for name in z.namelist():
                 if ".zip" in name:
-                    print '[DEBUG >>] New zip file: ' + name
+                    print '[DEBUG >>>] New zip file: ' + name
                     z.extract(name, "")
                     deszipa(name)
     file.close()
     return;
 
 
-print "[DEBUG >>] Function zip"
+print "[DEBUG >>>] Function zip"
 deszipa("./arq.zip")
