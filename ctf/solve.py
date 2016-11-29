@@ -1,5 +1,7 @@
 import zipfile
 
+PATH = "./"
+
 def deszipa( local ):
 
     file = open(local, "rb")
@@ -8,7 +10,7 @@ def deszipa( local ):
 
     for name in z.namelist():
                 if ".zip" in name:
-                    print '[DEBUG >>>] New zip file: ' + name
+                    print "[DEBUG >>>] New zip file: " + name
                     z.extract(name, "")
                     deszipa(name)
     file.close()
@@ -16,4 +18,4 @@ def deszipa( local ):
 
 
 print "[DEBUG >>>] Function zip"
-deszipa("./arq.zip")
+deszipa(PATH + "arq.zip")
